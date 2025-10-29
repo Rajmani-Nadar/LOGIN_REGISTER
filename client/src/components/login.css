@@ -1,0 +1,173 @@
+/* Background setup */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #162C47 0%, #355C7D 100%);
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInBg 2s ease-in-out;
+}
+
+/* Card styling */
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.8s ease-out;
+}
+
+/* Title */
+.card h3 {
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  animation: fadeIn 1.2s ease-in;
+}
+
+/* Input fields */
+.form-control {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border-radius: 12px;
+  padding: 10px 14px;
+  transition: all 0.3s ease;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: #00bfff;
+  box-shadow: 0 0 8px rgba(0, 191, 255, 0.4);
+  color: #fff;
+}
+
+/* Labels */
+.form-label {
+  color: #2b6ebe; /* light steel blue-gray */
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.form-label:hover {
+  color: #ffffff;
+  transform: translateX(2px);
+}
+
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(90deg, #00bfff, #0077ff);
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 10px rgba(0, 191, 255, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 191, 255, 0.4);
+}
+
+/* Forgot Password + Signup text */
+.text-primary {
+  color: #00bfff !important;
+  transition: all 0.3s ease;
+}
+
+.text-primary:hover {
+  color: #1ecfff !important;
+  text-decoration: underline;
+}
+
+/* Alerts */
+.alert {
+  border-radius: 10px;
+  padding: 10px 14px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.card h3 {
+  color: #2b6ebe;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  font-size: 1.8rem;
+  /* text-shadow: 0 0 4px rgba(20, 40, 70, 0.6), 0 0 8px rgba(18, 60, 110, 0.4); */
+  animation: softGlow 2s ease-in-out infinite alternate;
+}
+
+/* Subtle breathing effect for heading */
+@keyframes softGlow {
+  from {
+    text-shadow: 0 0 3px rgba(18, 60, 110, 0.5);
+  }
+  to {
+    text-shadow: 0 0 6px rgba(18, 60, 110, 0.7);
+  }
+}
+
+
+/* Fade-in background animation */
+@keyframes fadeInBg {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Fade-in for elements */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide in card animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 500px) {
+  .card {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .card h3 {
+    font-size: 1.4rem;
+  }
+}
