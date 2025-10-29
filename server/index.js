@@ -82,7 +82,7 @@ app.post("/api/forgot-password", async (req, res) => {
     }
 
     // Simulate sending email (you’ll add real email later)
-    console.log(`📧 Password reset link sent to ${email}`);
+    console.log(` Password reset link sent to ${email}`);
 
     res.status(200).json({ message: "Password reset link sent to your email" });
   } catch (error) {
